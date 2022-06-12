@@ -28,6 +28,10 @@ struct Movie {
         return dateFormatter.string(from: releaseDate)
     }
     
+    var urlImage: String {
+        return "https://image.tmdb.org/t/p/w500" + self.posterPath
+    }
+    
     init(dto: MovieDTO) {
         self.id = dto.id ?? 0
         self.overview = dto.overview ?? "--"

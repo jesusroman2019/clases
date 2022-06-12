@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C89802F285558E600612C65 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C89802E285558E600612C65 /* MovieTableViewCell.swift */; };
 		CA14ADD42852D67D007DC699 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA14ADD32852D67D007DC699 /* Movie.swift */; };
 		CA14ADE22852E21F007DC699 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA14ADE12852E21F007DC699 /* MoviesViewController.swift */; };
 		CA14ADEA2852E374007DC699 /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA14ADE92852E374007DC699 /* Movie.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C89802E285558E600612C65 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		CA14ADD32852D67D007DC699 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		CA14ADE12852E21F007DC699 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		CA14ADE92852E374007DC699 /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				CA14ADE12852E21F007DC699 /* MoviesViewController.swift */,
+				8C89802E285558E600612C65 /* MovieTableViewCell.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			files = (
 				CA83FF5A28405BEC001DCD3E /* AppDelegate.swift in Sources */,
 				CA14ADD42852D67D007DC699 /* Movie.swift in Sources */,
+				8C89802F285558E600612C65 /* MovieTableViewCell.swift in Sources */,
 				CA679AFA284D7076009B3E0B /* MoviesResponse.swift in Sources */,
 				CA83FF7A2840619B001DCD3E /* MovieWS.swift in Sources */,
 				CA83FF5C28405BEC001DCD3E /* SceneDelegate.swift in Sources */,
