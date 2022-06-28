@@ -39,9 +39,9 @@ extension SearchMoviesAdapter: UISearchBarDelegate {
                         return title.contains(text)
                     }
                     
-                    //let arrayToShow: [Any] = result.count != 0 ? result : ["No se encontraron resultado para la búsqueda de:\n\n\(searchText)"]
+                    let arrayToShow: [Any] = result.count != 0 ? result : ["No se encontraron resultado para la búsqueda de:\n\n\(searchText)"]
                     
-                    self.controller.setResultOfSearchMovies(result)
+                    self.controller.setResultOfSearchMovies(arrayToShow)
                 }
     }
 }
