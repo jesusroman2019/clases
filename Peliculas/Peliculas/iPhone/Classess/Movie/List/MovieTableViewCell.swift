@@ -48,4 +48,15 @@ class MovieTableViewCell: UITableViewCell {
             self.transform = .identity
         }
     }
+    
 }
+    
+    extension MovieTableViewCell {
+        
+        class func buildIn(_ tableView: UITableView, indexPath: IndexPath, movie: Movie) -> MovieTableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as? MovieTableViewCell
+            cell?.updateData(movie)
+            return cell ?? MovieTableViewCell()
+        }
+        
+    }

@@ -10,37 +10,49 @@ import UIKit
 class MoviesViewController: UIViewController {
     
     @IBOutlet private weak var tlvMovies: UITableView!
+    @IBOutlet private weak var srcMovies: UISearchBar!
     
-    var arrayMovies = [Movie]()
+    lazy var listAdapter = ListMoviesAdapter(controller: self)
+    lazy var searchAdapter = SearchMoviesAdapter(controller: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tlvMovies.dataSource = self
+        
+        self.setupAdapters()
         self.getAllMovies()
     }
     
     private func getAllMovies() {
         let ws = MovieWS()
         ws.getAllMovies { arrayMoviesDTO in
-            self.arrayMovies = arrayMoviesDTO.toMovies
+            
+            let arrayData = arrayMoviesDTO.toMovies
+            self.listAdapter.arrayData = arrayData
+            self.searchAdapter.arrayData = arrayData
             self.tlvMovies.reloadData()
         }
     }
+    
+    private func setupAdapters() {
+        self.tlvMovies.dataSource = self.listAdapter
+        self.tlvMovies.delegate = self.listAdapter
+        self.srcMovies.delegate = self.searchAdapter
+    }
+    
+    func setResultOfSearchMovies(_ arrayData: [Movie]) {
+        self.listAdapter.arrayData = arrayData
+        self.tlvMovies.reloadData()
+        
+    }
+    
+    
+    
+    func openDetailMovie(_ movie: Movie) {
+        print("abrir el detalle de la pelicula:\(movie.title)")
+        
+    }
+    
 }
 
-extension MoviesViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.arrayMovies.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as? MovieTableViewCell
-        
-        let objMovie = self.arrayMovies[indexPath.row]
-        cell?.updateData(objMovie)
-        
-        return cell ?? UITableViewCell()
-    }
-}
+
+
