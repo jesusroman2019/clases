@@ -14,6 +14,11 @@ struct Movie {
     let releaseDate: Date?
     let title: String
     let voteAverage: Int
+    let genres: [String]
+    
+    var genresFormat: String {
+        self.genres.joined(separator: "  •  ")
+    }
     
     var releaseDateFormat: String {
         
@@ -43,6 +48,9 @@ struct Movie {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         dateFormatter.locale = Locale(identifier: "es_pe")
         self.releaseDate = dateFormatter.date(from: dto.release_date ?? "")
+        
+        let genresDTO = dto.genres ?? []
+        self.genres = genresDTO.map({ $0.name ?? "" })
     }
 }
 

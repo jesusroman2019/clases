@@ -65,9 +65,9 @@ class MoviesViewController: UIViewController {
     }
     
     func openDetailMovie(_ movie: Movie) {
-        print("abrir el detalle de la película: \(movie.title)")
+        let controller = MovieDetailViewController.buildWithIdMovie(movie.id)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
-
 
 

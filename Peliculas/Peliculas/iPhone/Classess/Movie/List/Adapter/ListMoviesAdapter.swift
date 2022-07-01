@@ -44,6 +44,8 @@ extension ListMoviesAdapter: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         if let objMovie = self.arrayData[indexPath.row] as? Movie {
             self.controller.openDetailMovie(objMovie)
         }

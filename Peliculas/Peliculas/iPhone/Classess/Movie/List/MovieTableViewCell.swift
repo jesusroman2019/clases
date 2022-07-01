@@ -5,6 +5,7 @@
 //  Created by user191554 on 6/11/22.
 //
 
+
 import UIKit
 import Alamofire
 
@@ -48,15 +49,13 @@ class MovieTableViewCell: UITableViewCell {
             self.transform = .identity
         }
     }
-    
 }
+
+extension MovieTableViewCell {
     
-    extension MovieTableViewCell {
-        
-        class func buildIn(_ tableView: UITableView, indexPath: IndexPath, movie: Movie) -> MovieTableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as? MovieTableViewCell
-            cell?.updateData(movie)
-            return cell ?? MovieTableViewCell()
-        }
-        
+    class func buildIn(_ tableView: UITableView, indexPath: IndexPath, movie: Movie) -> MovieTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as? MovieTableViewCell
+        cell?.updateData(movie)
+        return cell ?? MovieTableViewCell()
     }
+}

@@ -19,4 +19,13 @@ struct MovieDTO: Decodable {
     let release_date: String?
     let title: String?
     let vote_average: Double?
+    let genres: [GenreMovieDTO]?
 }
+
+struct GenreMovieDTO: Decodable {
+    let id: Int?
+    let name: String?
+}
+
+
+//srgrssfhg • jgvjgkvjyg • ygk jgkj y • uy gukygy

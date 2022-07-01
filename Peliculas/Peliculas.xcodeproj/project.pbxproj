@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C22A030286E7C150082FE8F /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C22A02F286E7C150082FE8F /* MovieDetailViewController.swift */; };
 		8C89802F285558E600612C65 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C89802E285558E600612C65 /* MovieTableViewCell.swift */; };
 		8CF92DB0286A8144008B7E5D /* ListMoviesAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF92DAF286A8144008B7E5D /* ListMoviesAdapter.swift */; };
 		8CF92DB4286A8C2F008B7E5D /* SearchMoviesAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF92DB3286A8C2F008B7E5D /* SearchMoviesAdapter.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C22A02F286E7C150082FE8F /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		8C89802E285558E600612C65 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		8CF92DAF286A8144008B7E5D /* ListMoviesAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMoviesAdapter.swift; sourceTree = "<group>"; };
 		8CF92DB3286A8C2F008B7E5D /* SearchMoviesAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMoviesAdapter.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C22A02E286E7BCF0082FE8F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8C22A02F286E7C150082FE8F /* MovieDetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		8CF92DAE286A8103008B7E5D /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 		CA14ADDC2852E1AF007DC699 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				8C22A02E286E7BCF0082FE8F /* Detail */,
 				CA14ADDD2852E1BB007DC699 /* List */,
 			);
 			path = Movie;
@@ -255,6 +266,7 @@
 				CA83FF7A2840619B001DCD3E /* MovieWS.swift in Sources */,
 				8CF92DB4286A8C2F008B7E5D /* SearchMoviesAdapter.swift in Sources */,
 				CA83FF5C28405BEC001DCD3E /* SceneDelegate.swift in Sources */,
+				8C22A030286E7C150082FE8F /* MovieDetailViewController.swift in Sources */,
 				CA14ADE22852E21F007DC699 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
